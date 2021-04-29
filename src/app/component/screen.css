@@ -1,4 +1,50 @@
 .message{
   width:50%;
-  
+ margin-top: 50%;
+ margin-bottom: 30px;
+ border: 5px solid red;
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ 
+}
+.mainscreen{
+  padding-top: 70px;
+}
+.screen{
+  border: 10px solid rgb(185, 38, 38);
+  width:60%;
+ 
+}
+.title{
+  color: orangered;
+}
+.questionasked{
+  background-color: black;
+  color:whitesmoke;
+  width:60%;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 0px;
+}
+
+.answer{
+  width:100%;
+  justify-content: right;
+  align-items: flex-end;
+  align-content: flex-end;
+}
+.main-answer{
+  background-color: #88f3fc;
+  width:fit-content;
+  float: right;
+  justify-content: right;
+  align-items: flex-end;
+  align-content: flex-end;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  color:red;
+
+}
+.buttons{
+  margin-bottom: 30px;
+  margin-left: 10px;
 }

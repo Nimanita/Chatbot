@@ -37,13 +37,19 @@ function handleClick()
    }
 }
     return(
-       <div class="screen">
+        <div class="container mainscreen">
+             
+       <div class="justify-content-center screen">
+        <h1 class="title">Chatbot</h1>
            <Question counter = {counter}/>
            <div class="Inputtext">
-           <h1>Chatbot</h1>
-          <input  id = "Inputfield"  class="message" onChange={handleChange} ></input>
-          <button onClick={handleClick}>Send</button>
+         
+          <input  id = "Inputfield"  class=" sticky-bottom message" onChange={handleChange} ></input>
+          
+          <button type="button" class="btn btn-primary" onClick={handleClick}>Send</button>
+         
           </div>
+       </div>
        </div>
     );
 }

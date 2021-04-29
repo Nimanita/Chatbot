@@ -54,8 +54,8 @@ function Questiontreatment(props)
     {id : 5, q : "Date of birth of  "},
     {id : 6, q : "Which school is"},
     
-    {id : 7, q : "Which program are you looking for?"}
- 
+    {id : 7, q : "Which program are you looking for?"},
+    {id : 8, q : "Please contact +91 1234567890 or email to xyz@gmail.com for further details."}
 
   
 ];
@@ -80,47 +80,53 @@ function Scienceclicked()
   if(id === 3)
   {
      return(
-       <h1>{question[id-1].q} {answer[id-2]},How are you today?</h1>
-
+       <div class="row questionasked">
+       <h1 >{question[id-1].q} {answer[id-2]},How are you today?</h1>
+       </div>
      );
   }
   else if(id === 5)
   {
     return(
+      <div class="row questionasked">
       <h1>{question[id-1].q} {answer[id-2]} is ...</h1>
-
+      </div>
     );
   }
   else if(id === 6)
   {
     return(
+      <div class="row questionasked">
       <h1>{question[id-1].q} {answer[id-3]} in ?</h1>
-
+      </div>
     );
   }
   else if(id === 7)
   {
     return(
-      <div>
+      <div class="option">
+      <div class="row questionasked">
       <h1>{question[id-1].q}</h1>
-      <div class="row">
-        <div class="col-lg-3">
-          <button onClick={()=>Englishclicked()}>English</button>
+      <div class="row buttons">
+        <div class="col-lg-4">
+          <button type="button" class="btn btn-outline-light" onClick={()=>Englishclicked()}>English</button>
         </div>
-        <div class="col-lg-3">
-          <button onClick={()=>Mathclicked()}>Math</button>
+        <div class="col-lg-4">
+          <button type="button" class="btn btn-outline-light" onClick={()=>Mathclicked()}>Math</button>
         </div>
-        <div class="col-lg-3">
-          <button onClick={()=>Scienceclicked()}>Science</button>
+        <div class="col-lg-4">
+          <button type="button" class="btn btn-outline-light" onClick={()=>Scienceclicked()}>Science</button>
         </div>
       </div>
       <Subject id = {subjectid}/>
       </div>
+      </div>
     );
   }
   return(
-  
+    <div class="row questionasked">
     <h1>{question[id-1].q}</h1>
+    </div>
   );
 
 }
@@ -137,7 +143,8 @@ function Question(props){
     {id : 5, q : "Date of birth of  "},
     {id : 6, q : "Which school is"},
     
-    {id : 7, q : "Which program are you looking for?"}
+    {id : 7, q : "Which program are you looking for?"},
+    {id : 8, q : "Please contact +91 1234567890 or email to xyz@gmail.com for further details."}
  
 
    
@@ -153,9 +160,11 @@ function Question(props){
      
       {question.filter(x => 
     x.id <= props.counter).map(y => (
-   <div>
+    <div>
+     
      <Questiontreatment q = {y.q} id = {y.id}/>
 
+    
     <Answer id = {y.id}/>
     </div>
     ))}
